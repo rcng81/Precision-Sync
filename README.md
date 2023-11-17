@@ -2,7 +2,7 @@
 
 Welcome to Precision Sync, a tool designed to help gamers find their perfect aiming sensitivity across different games. No more guesswork or painstaking manual adjustments—just seamless, precise conversion!
 
-Try it now: [Precision Sync]([https://sensitivity-converter-4tr6j8v8p-russell-ngs-projects.vercel.app/](https://sensitivity-converter-three.vercel.app/))
+Try it now: [Precision Sync](https://sensitivity-converter-three.vercel.app/)
 
 ## Features 🌟
 
