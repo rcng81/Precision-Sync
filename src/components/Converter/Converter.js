@@ -42,7 +42,6 @@ const Converter = () => {
     'Squad',
     'Team Fortress 2',
     'Roblox',
-    'Warframe',
     // ...add more games as needed
   ].sort(); // This sorts the array alphabetically
 
