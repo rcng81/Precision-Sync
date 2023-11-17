@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600&family=Open+Sans:wght@300;400;600&family=Oswald:wght@500&family=Poppins:wght@500;600&family=Roboto:ital,wght@0,300;0,400;1,100;1,300&display=swap');
+
+:root {
+  --primary-color: #121220;
+  --secondary-color: #23243B;
+  --third-color: #121220;
+  --big-text-color: #F0F0F5;
+  --text-color: #e6e6e6;
+  --sign-color: #cccccc;
+  --input-color: #1E1F34;
+  --darker-color: #0d0d0d;
+  --input-border-color: #555; 
+  --highlight-color: #aaa; 
+  --selected-option-bg-color: #333; 
+  --focused-option-bg-color: #444; 
+  --option-text-color: #fff; 
+  --input-text-color: #fff; 
+  --menu-background-color-dark: #333; /* Dark theme dropdown background */
+  --option-text-color-dark: #FFF; /* Dark theme dropdown text color */
+  --selected-option-bg-color: #555; /* Selected option background color */
+  --focused-option-bg-color: #444; /* Focused option background color */
+  --selected-focused-option-text-color: #FFF; /* Selected and focused option text color */
+  --input-border-color: #555;
+  --input-border-hover-color: #aaa;
+}
+
+/* Light Mode Variables */
+.light-mode {
+  --primary-color: #f8f9fa; /* Very light grey, for background */
+  --secondary-color: #ffffff; /* Pure white, for containers */
+  --third-color: #e9ecef; /* Light grey, for secondary elements and padding */
+  --big-text-color: #212529; /* Dark grey, for main headings and important text */
+  --text-color: #495057; /* Medium grey, for regular text */
+  --sign-color: #adb5bd; /* Light-medium grey, for less important icons and borders */
+  --input-color: #e2e6ea; /* Light grey, for input fields */
+  --darker-color: #dee2e6; /* Grey, for shadows and borders */
+  --input-text-color: #495057; /* Medium grey, for text in inputs */
+  --light-input-color: #e2e6ea; /* Light grey, for input backgrounds */
+  --light-text-color: #495057; /* Medium grey, for text */
+  --menu-background-color-light: #f8f9fa; /* Very light grey, for dropdown background */
+  --option-text-color-light: #212529; /* Dark grey, for dropdown text */
+  --selected-option-bg-color: #ced4da; /* Light-medium grey, for selected option background */
+  --focused-option-bg-color: #adb5bd; /* Light-medium grey, for focused option background */
+  --selected-focused-option-text-color: #212529; /* Dark grey, for selected and focused option text */
+  --input-border-color: #ced4da; /* Light-medium grey, for input borders */
+  --input-border-hover-color: #adb5bd; /* Medium grey, for hover state borders */
+}
+
+body {
+  background-color: var(--third-color);
+  color: var(--text-color);
+  font-family: 'Roboto', sans-serif;
+}
+
+.converter-container {
+  max-width: 100%;
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--secondary-color); /* Slightly lighter dark shade for the container */
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Optional: Adds a subtle shadow for depth */
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--big-text-color); /* Bright color for the main heading to stand out */
+}
+
+.header {
+  background-color: var(--secondary-color);
+  padding: 1rem 0; /* Increase padding to make the header bigger */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: flex-start; /* Align items to the start (left side) */
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+  z-index: 10;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Aligns items to the start (left side) */
+  padding: 0 1rem; /* Adjusted padding */
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+}
+
+.header-icon,
+.header-title,
+.header-divider,
+.theme-icon {
+  display: flex;
+  align-items: center; /* Aligns the text and icon on the cross-axis (vertically) */
+  justify-content: center; /* Centers them on the main-axis (horizontally) */
+}
+
+.header-title {
+  font-size: 1.5rem;
+  margin-right: 4px; /* Reduced space after the title */
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header-title {
+  font-size: 1.25rem; /* Adjust the size if needed */
+  margin: 0 10px; /* Space on both sides of the title */
+}
+
+.header-divider {
+  height: 1.5rem; /* Height to match the title size */
+  width: 1px; /* Width of the divider line */
+  background-color: var(--big-text-color); /* Color of the divider line */
+  margin-right: 10px; /* Space between the divider and the theme icon */
+}
+.theme-icon {
+  font-size: 1.2rem;
+  margin-left: 4px; /* Reduced space to bring theme icons closer */
+}
+
+
+.main-content {
+  margin-top: 3rem; /* Adjust the margin to the height of your header */
+  /* ... rest of your main content styles ... */
+}
+/* Style the dropdowns, inputs, buttons */
+.input-rectangle, .converter-result, .convert-button {
+  background-color: var(--third-color); /* Darker elements for input fields and buttons */
+  color: var(--text-color); /* White text for readability */
+  border: 1px solid #555; /* Slightly lighter border for some contrast */
+}
+
+.input-rectangle {
+  width: 100%; /* Full width of their parent */
+  font-size: 1rem; /* Uniform font size */
+  border: 2px solid #ccc; /* Same border style */ /* IMPORTANT CHANGES BORDER OF THE RECTANGLE*/
+  border-radius: 5px; /* Rounded corners like the result box */
+  margin-top: 1rem; /* Space above each input */
+}
+
+.select-rectangle{
+  width: 100%; /* Full width of their parent */
+  font-size: 1rem; /* Uniform font size */
+  border: 2px solid #ccc; /* Same border style */ /* IMPORTANT CHANGES BORDER OF THE RECTANGLE*/
+  border-radius: 5px; /* Rounded corners like the result box */
+  margin-top: 1rem; /* Space above each input */
+}
+
+.input-rectangle,
+.converter-result,
+.select-container { /* Add class for react-select container */
+  width: 100%; /* Full width to match other inputs */
+  padding: 0.5rem; /* Adjust padding to match design */
+  font-size: 1rem; /* Uniform font size */
+  border: 2px solid #ccc; /* Same border style */
+  border-radius: 5px; /* Rounded corners like the result box */
+  margin-top: 1rem; /* Space above each input */
+}
+
+.swap-button, .refresh-button {
+  color: var(--sign-color); /* Use the accent color for icons */
+}
+
+.swap-button:hover, .refresh-button:hover {
+  color: var(--sign-color); /* Slightly different shade when hovering for feedback */
+}
+
+.converter-container .theme-toggle .faMoon,
+.converter-container .theme-toggle .faSun {
+  color: var(--sign-color); /* Color for icons in dark mode */
+}
+
+/* End of Dark Mode Styles */
+
+/* Light Mode Styles */
+
+
+.theme-toggle .faMoon,
+.theme-toggle .faSun {
+  color: var(--sign-color); /* Use the dark mode color as default */
+}
+
+.light-mode .converter-container {
+  background-color: var(--secondary-color); /* Lighter color for the container */
+  color: var(--big-text-color);
+}
+
+.light-mode .input-rectangle,
+.light-mode .converter-result,
+.light-mode .select-rectangle {
+  background-color: var(--light-input-color); /* Light background for inputs */
+  color: var(--input-text-color); /* Dark text for readability */
+  border: 1px solid var(--input-border-color); /* Subtle border for inputs */
+}
+
+.light-mode .theme-toggle .faMoon,
+.light-mode .theme-toggle .faSun {
+  color: var(--big-text-color); /* Dark color for icons */
+}
+
+.light-mode .swap-button,
+.light-mode .refresh-button {
+  color: var(--big-text-color); /* Dark color for icons */
+}
+
+.light-mode .tooltip .tooltiptext {
+  background-color: var(--darker-color); /* Medium grey for tooltips */
+}
+
+.swap-button, .refresh-button {
+  color: var(--text-color)
+}
+
+.theme-toggle {
+  position: fixed; /* or 'absolute' depending on your need */
+  top: 1rem; /* Adjust as needed */
+  left: 1rem; /* Adjust as needed */
+  z-index: 1000; /* Ensure it's above other elements */
+  cursor: pointer;
+}
+
+
+.copy-icon {
+  cursor: pointer;
+  margin-right: 10px; /* Adjust spacing as needed */
+  color: var(--sign-color);
+  display: flex;
+}
+
+.copy-icon:hover {
+  color: #ffffff; /* Change color on hover for feedback */
+}
+
+.copy-feedback {
+  color: #4BB543; /* Feedback message color */
+  font-size: 0.9rem; /* Adjust size as needed */
+  margin-top: 0.5rem; /* Space from the result box */
+}
+
+.sensitivity-value-container{
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+
+.game-selectors, .conversion-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.game-dropdown {
+  flex: 1;
+  margin: 0 1rem;
+}
+
+/* Additional styles for aligning the labels and fields */
+.from-section,
+.to-section {
+  display: block;
+  flex-direction: column;
+  align-items: center; /* Centers the children horizontally */
+  width: 100%; /* Take full width to accommodate inner elements */
+  margin: 0 20px; /* Gives space on left and right */
+}
+
+.input-rectangle {
+  width: 100%; /* Full width of their parent */
+  padding: 21px; /* Same padding for all */
+  font-size: 1rem; /* Uniform font size */
+  border: 2px solid #ccc; /* Same border style */ /* IMPORTANT CHANGES BORDER OF THE RECTANGLE*/
+  border-radius: 5px; /* Rounded corners like the result box */
+  margin-top: 1rem; /* Space above each input */
+}
+
+/* This class is for the converted sensitivity result text */
+.result-text {
+  font-size: 1rem; /* Smaller font size */
+}
+
+.converter-result {
+  width: 100%; /* Keeps width consistent with other inputs */
+  height: 66px; /* Assuming this is the height of your other inputs, adjust if necessary */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-top: 1rem;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Labels placed above the rectangles */
+.from-section label, .to-section label {
+  display: block;
+  margin-bottom: .5rem; /* Spacing below the label */
+  text-align: left; /* Align the text to the left */
+  width: 100%; /* Ensure the label spans the full width */
+  padding-left: 0; /* Adjust padding if needed */
+  margin-left: 0;
+  
+}
+
+.swap-button {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  
+  /* Add the following */
+  position: relative; /* Position relative to its normal position */
+  top: 50%; /* Start at 50% from the top of the parent */
+  transform: translateY(-50%); /* This will perfectly center it, no matter the height */
+}
+
+.swap-button, .refresh-button {
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.swap-button:hover svg {
+  transform: scale(1.1);
+}
+
+.refresh-button:hover svg{
+  transform: scale(1.1);
+}
+
+.sensitivity-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sensitivity-input button {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.from-section, .to-section {
+  width: calc(50% - 40px);
+  text-align: center;
+}
+
+.convert-button {
+  margin-top: 2rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box; /* Ensures padding and borders are within the element's width/height */
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  background-color: black;
+  color: white;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 8px; /* Add some horizontal padding */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Ensures the tooltip is centered */
+  white-space: nowrap; /* Keeps the text in one line */
+  transition: visibility 0.2s, opacity 0.2s ease-in-out;
+}
+
+.tooltip:hover .tooltiptext,
+.tooltip:focus-within .tooltiptext { /* Show the tooltip on hover or focus within */
+  visibility: visible;
+  opacity: 1;
+}
+
+.select-container .react-select__control {
+  border: none; /* Remove default border */
+  box-shadow: none; /* Remove default box-shadow */
+}
+
+.select-container .react-select__value-container {
+  padding: 0.5rem; /* Adjust padding to match other inputs */
+}
+
+/* Increase specificity and use !important to override default styles */
+.Select__control .Select__value-container .Select__input input {
+  caret-color: white !important; /* Or any color you prefer */
+}
+
+.select-rectangle:hover {
+  border-color: #66afe9; /* Choose a bright color for the glow */
+  box-shadow: 0 0 8px #66afe9; /* Adjust the color and size of the glow as needed */
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.input-rectangle:hover {
+  border-color: #66afe9; /* Choose a bright color for the glow */
+  box-shadow: 0 0 8px #66afe9; /* Adjust the color and size of the glow as needed */
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+/* Glow effect on hover for output sensitivity box */
+.converter-result:hover {
+  border-color: #66afe9; /* Choose a bright color for the glow */
+  box-shadow: 0 0 8px #66afe9; /* Adjust the color and size of the glow as needed */
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.select-rectangle:hover,
+.input-rectangle:hover,
+.converter-result:hover {
+  border-color: #4ca1af; /* Brighter color for a bold glow */
+  box-shadow: 0 0 12px #4ca1af; /* Increase the size of the glow */
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.light-mode .select-rectangle:hover,
+.light-mode .input-rectangle:hover,
+.light-mode .converter-result:hover {
+  border-color: #FFA500; /* Different color for light mode, a soft green */
+  box-shadow: 0 0 12px #FFA500; /* Increase the size of the glow */
+  transition: box-shadow 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .game-selectors, .conversion-section, .from-section, .to-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  h1{
+    font-size: 2rem;
+  }
+
+  input, select, button {
+    width: 90%; /* Adjust width if necessary */
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
+    margin: 10px 0; /* Add top and bottom margin for spacing */
+  }
+
+  .convert-button, .game-dropdown select, .sensitivity-input input, .sensitivity-input button {
+    width: 90%;
+  }
+
+  .converter-result {
+    margin-bottom: 10px; /* Increase the bottom margin of the output box */
+  }
+
+
+  .header-content {
+    padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+}
