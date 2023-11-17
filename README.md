@@ -23,5 +23,4 @@ Try it now: [Precision Sync](https://sensitivity-converter-4tr6j8v8p-russell-ngs
 
 - HTML5, CSS3, and JavaScript for a responsive front-end.
 - React.js for a dynamic and high-performing user interface.
-- Next.js for server-side rendering and optimization.
 - Vercel for deployment and hosting.
