@@ -19,7 +19,7 @@ Try it now: [Precision Sync](https://sensitivity-converter-three.vercel.app/)
 4. Get your new sensitivity settings instantly.
 5. Apply to your game and enjoy consistent aim across all your games!
 
-## Technologies Used 🛠️
+## Tools Used 🛠️
 
 - HTML5, CSS3, and JavaScript for a responsive front-end.
 - React.js for a dynamic and high-performing user interface.
