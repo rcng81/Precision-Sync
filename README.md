@@ -29,6 +29,6 @@ Employed to develop a responsive front-end.
 
 Create dynamic and high-performing user interface.
 
-![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white
+![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 - Vercel for deployment and hosting.
