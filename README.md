@@ -26,5 +26,6 @@ Try it now: [Precision Sync](https://sensitivity-converter-three.vercel.app/)
 Employed to develop a responsive front-end.
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+
 Create dynamic and high-performing user interface.
 - Vercel for deployment and hosting.
